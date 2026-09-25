@@ -3,19 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi sitio con CD - Actualizado</title>
+    <title>Mi Sitio en Vivo - CD</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             text-align: center;
-            margin-top: 100px;
-            background-color: #e2f0d9; /* Cambié un poco el color de fondo para probar */
+            margin-top: 80px;
+            background: linear-gradient(135deg, #74b9ff, #0984e3);
+            color: white;
         }
-        h1 { color: #2e7d32; }
+        .card {
+            background: white;
+            color: #333;
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+        button {
+            background-color: #0984e3;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background-color: #74b9ff;
+        }
     </style>
 </head>
 <body>
-    <h1>¡Despliegue Continuo exitoso! 🚀</h1>
-    <p>Este cambio se actualizó automáticamente haciendo push a GitHub.</p>
+    <div class="card">
+        <h1>¡Hola, Mundo! 🚀</h1>
+        <p>Este sitio se actualizó mediante <strong>Despliegue Continuo (CD)</strong> con GitHub Actions.</p>
+        <p>¡Haz intentado hacer clic en el botón de prueba?</p>
+        <button onclick="saludar()">¡Haz clic aquí!</button>
+        <p id="mensaje" style="margin-top: 15px; font-weight: bold; color: #0984e3;"></p>
+    </div>
+
+    <script>
+        function saludar() {
+            document.getElementById('mensaje').innerText = "¡El JavaScript funciona a la perfección en GitHub Pages! 🎉";
+        }
+    </script>
 </body>
 </html>
